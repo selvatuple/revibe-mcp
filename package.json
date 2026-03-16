@@ -1,0 +1,43 @@
+{
+  "name": "revibe-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Revibe codebase analysis — works with Claude Desktop, Cursor, Windsurf, and any MCP-compatible client",
+  "type": "module",
+  "bin": {
+    "revibe-mcp": "./dist/server.js",
+    "revibe-mcp-auth": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "revibe",
+    "code-analysis",
+    "architecture",
+    "claude",
+    "cursor",
+    "windsurf",
+    "ai-agent",
+    "model-context-protocol"
+  ],
+  "author": "Revibe Codes <hello@revibe.codes>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selvatuple/revibe-mcp"
+  },
+  "homepage": "https://revibe.codes",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
