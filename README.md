@@ -63,7 +63,7 @@ Opens your browser — sign up or log in, click "Authorize". API key saved autom
 
 **Option B: Manual API key**
 
-Get a key from [revibe.codes/settings](https://revibe.codes/settings), then pass it via env:
+Get a key from [app.revibe.codes/settings](https://app.revibe.codes/settings), then pass it via env:
 ```json
 {
   "mcpServers": {
@@ -113,12 +113,29 @@ revibe-mcp-auth status
 revibe-mcp-auth logout
 ```
 
-## Packages
+## Claude Code Skill
 
-| Registry | Package | Install |
-|----------|---------|---------|
-| npm | [revibe-mcp](https://www.npmjs.com/package/revibe-mcp) | `npx revibe-mcp` |
-| PyPI | [revibe-mcp](https://pypi.org/project/revibe-mcp/) | `pip install revibe-mcp` |
+If you use [Claude Code](https://claude.ai/code), you can install Revibe as a slash command skill instead of (or in addition to) the MCP server:
+
+```bash
+# Copy the skill file
+mkdir -p ~/.claude/skills/revibe
+curl -o ~/.claude/skills/revibe/SKILL.md \
+  https://raw.githubusercontent.com/selvatuple/revibe-mcp/main/skills/claude-code/SKILL.md
+```
+
+Then use `/revibe` or `/revibe github.com/user/repo` inside Claude Code.
+
+The skill file is also available at [`skills/claude-code/SKILL.md`](skills/claude-code/SKILL.md).
+
+## Packages & Distribution
+
+| Method | Install |
+|--------|---------|
+| **npm** (zero install) | `npx revibe-mcp` |
+| **PyPI** | `pip install revibe-mcp` |
+| **MCP Registry** | [registry.modelcontextprotocol.io](https://registry.modelcontextprotocol.io) — search "revibe" |
+| **Claude Code Skill** | Copy [`skills/claude-code/SKILL.md`](skills/claude-code/SKILL.md) to `~/.claude/skills/revibe/` |
 
 ## License
 
