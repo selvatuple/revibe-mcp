@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.selvatuple/revibe-mcp",
+  "description": "Analyze any codebase — get architecture, file roles, execution flows, and agent context.",
+  "repository": {
+    "url": "https://github.com/selvatuple/revibe-mcp",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "revibe-mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "Revibe API key (optional — you can also use the revibe_login tool for browser-based auth)",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": true,
+          "name": "REVIBE_API_KEY"
+        }
+      ]
+    }
+  ]
+}

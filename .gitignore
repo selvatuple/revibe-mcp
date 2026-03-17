@@ -4,3 +4,6 @@ python/.venv/
 python/dist/
 python/*.egg-info/
 __pycache__/
+
+.mcpregistry_github_token
+.mcpregistry_registry_token
